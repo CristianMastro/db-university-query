@@ -1,6 +1,6 @@
 query 1 
 
-select *
+select s.*
 from students as s
 inner join degrees as d on s.degree_id = d.id
 where d.name like 'Corso di Laurea in Economia';
@@ -14,7 +14,9 @@ where de.name like 'Dipartimento di Neuroscienze' and d.level like 'magistrale';
 
 query 3 
 
-SELECT *
+SELECT c.*
 FROM courses AS c
-INNER JOIN course_teacher AS ct ON c.id = ct.teacher_id
+INNER JOIN course_teacher AS ct ON c.id = ct.course_id
 WHERE ct.teacher_id = 44;
+
+query 4
