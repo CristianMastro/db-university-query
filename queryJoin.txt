@@ -1,0 +1,20 @@
+query 1 
+
+select *
+from students as s
+inner join degrees as d on s.degree_id = d.id
+where d.name like 'Corso di Laurea in Economia';
+
+query 2 
+
+select *
+from degrees as d
+inner join departments as de on d.department_id = de.id
+where de.name like 'Dipartimento di Neuroscienze' and d.level like 'magistrale';
+
+query 3 
+
+SELECT *
+FROM courses AS c
+INNER JOIN course_teacher AS ct ON c.id = ct.teacher_id
+WHERE ct.teacher_id = 44;
